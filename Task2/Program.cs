@@ -5,6 +5,7 @@
 double Distance (double x1, double x2, double y1, double y2, double z1, double z2)
 {
     double dist = Math.Sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1)+(z2-z1)*(z2-z1));
+    dist = Math.Round(dist, 2);
     return dist;
 }
 Console.WriteLine("Input x coord of point_1: ");
@@ -20,4 +21,4 @@ double yCrd2 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("Input z coord of point_2: ");
 double zCrd2 = Convert.ToDouble(Console.ReadLine());
 double dist_1_2 = Distance(xCrd1, xCrd2, yCrd1, yCrd2, zCrd1, zCrd2);
-Console.WriteLine($"Distance between points " + dist_1_2);
+Console.WriteLine("Distance between points " + dist_1_2);
